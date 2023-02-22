@@ -1,0 +1,15 @@
+{
+  "name": "movie-app-vanilla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel ./index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
