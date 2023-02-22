@@ -1,0 +1,19 @@
+html {
+  --color-dark: #0e111b;
+  --color-white: #fff;
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-30: rgba(255, 255, 255, 0.3);
+  --color-white-20: rgba(255, 255, 255, 0.2);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-5: rgba(255, 255, 255, 0.05);
+  --color-primary: #613591;
+  --color-hover: #320963;
+  --color-area: #10193a;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-dark);
+  line-height: 1.4;
+  color: var(--color-white);
+}
