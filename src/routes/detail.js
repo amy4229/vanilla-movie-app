@@ -3,7 +3,16 @@ import movieStore, { getMovieDetails } from '../stores/movie.js'
 
 export default class Detail extends Component {
   async render() {
+
     this.el.classList.add("movie-detail", "container");
+    this.el.innerHTML = /*html */`
+      <div class="poster skeleton"></div>
+      <div class="specs">
+        <div class="title skeleton"></div>
+        <div class="labels skeleton"></div>
+        <div class="plot skeleton"></div>
+      </div>
+    `
     await getMovieDetails(history.state.id);
     const { Actors, Country, Director, Genre, Plot, Title, Poster, Production, Released, Runtime, Ratings } = movieStore.state.movie;
     const resize_poster = Poster.replace("SX300", "SX500");
@@ -11,7 +20,7 @@ export default class Detail extends Component {
       <div style="background-image:url('${resize_poster}')" class="poster"></div>
       <div className="specs">
         <div class="title"> ${Title}</div>
-        <div class="lables">
+        <div class="labels">
           <span>${Released}</span>
           &nbsp;/&nbsp;
           <span>${Runtime}</span>
