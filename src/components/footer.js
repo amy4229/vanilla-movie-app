@@ -1,4 +1,5 @@
 import Component from "../core/component.js"
+import aboutStore from '../stores/aboutStore.js';
 
 
 export default class Footer extends Component {
@@ -7,12 +8,13 @@ export default class Footer extends Component {
   }
 
   render() {
+    const { repository, github } = aboutStore.state;
     this.el.innerHTML = /*html */`
       <div>
-        <a href="https://github.com/amy4229/vinilla-movie-app">Github Repository</a>
+        <a href="${repository}">Github Repository</a>
       </div>
       <div>
-        <a href="https://github.com/amy4229">${new Date().getFullYear()}</a>
+        <a href="${github}">${new Date().getFullYear()}</a>
       </div>
     `;
   }
