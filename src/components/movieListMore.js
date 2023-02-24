@@ -14,8 +14,14 @@ export default class MovieListMore extends Component {
   }
 
   render() {
-    this.el.classList.add('btn', 'view-more', 'hide');
+    this.el.classList.add('btn', 'view-more');
     this.el.textContent = 'View more..';
+    const { movies, page, maxPage } = movieStore.state;
+    if (movies) {
+      maxPage > page
+        ? this.el.classList.remove('hide')
+        : this.el.classList.add('hide');
+    }
 
     this.el.addEventListener('click', async () => {
       this.el.classList.add('hide');
