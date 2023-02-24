@@ -13,6 +13,7 @@ export default class Search extends Component {
     inputEl.addEventListener('input', () => {
       movieStore.state.searchText = inputEl.value;
     })
+    if (movieStore.state.searchText) inputEl.value = movieStore.state.searchText
 
     inputEl.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' && movieStore.state.searchText.trim()) {
