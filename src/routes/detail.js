@@ -18,7 +18,7 @@ export default class Detail extends Component {
     const resize_poster = Poster.replace("SX300", "SX500");
     this.el.innerHTML = /*html*/`
       <div style="background-image:url('${resize_poster}')" class="poster"></div>
-      <div className="specs">
+      <div class="specs">
         <div class="title"> ${Title}</div>
         <div class="labels">
           <span>${Released}</span>
